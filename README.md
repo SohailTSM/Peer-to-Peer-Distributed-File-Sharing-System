@@ -1,4 +1,4 @@
-# Assignment 3: P2P File Sharing System
+# P2P Distributed File Sharing System
 
 ## Overview
 
@@ -141,22 +141,3 @@ These are commands the user can enter at the client prompt (`$>`):
 
 ---
 
-## Performance Analysis Report
-
-### Download time
-
-- When my code didn't had thread pool for parallel chunk download, for 1 GB file it took around 5 minutes to download sequentially from 1 seeder.
-- After implementing the thread pool, with 8 threads it took around 3 seconds to download all the chunks for 1 GB file from 1 seeder.
-- And for multiple 2 seeders, it took around 1.7 seconds to download all the chunks for 1 GB file.
-
-### Current Limitation
-
-- No partial seeder
-- Only 1 piece selection algorith, i.e. round robin
-
-### Design Choices:
-
-- Use of SHA1 for file integrity.
-- Multi-threaded downloads for speed.
-- Tracker redundancy and sync for reliability.
-- Data structures for efficient lookup and concurrency.
